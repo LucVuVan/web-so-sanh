@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3 class="product-name">${product.name}</h3>
                     <p class="product-platform">${product.platform}</p>
                     <p class="product-price">${product.price.toLocaleString('vi-VN')} ₫</p>
-                    <a href="${product.url}" target="_blank" class="buy-button">Đến nơi bán</a>
+                    <a href="${product.url}" target="_blank" class="buy-button">So sánh giá</a>
                 </div>
             `;
             productList.appendChild(productCard);
