@@ -1,0 +1,283 @@
+{
+  "categories": [
+    { "id": "dien-lanh", "name": "Điện lạnh" },
+    { "id": "tivi-am-thanh", "name": "Tivi - Âm thanh" },
+    { "id": "dien-thoai-may-tinh-bang", "name": "Điện thoại - MTB" },
+    { "id": "thiet-bi-gia-dung", "name": "Thiết bị gia dụng" },
+    { "id": "thiet-bi-y-te-suc-khoe", "name": "Thiết bị y tế" },
+    { "id": "thoi-trang-my-pham", "name": "Thời trang - Mỹ phẩm" },
+    { "id": "me-va-be", "name": "Mẹ và bé" }
+  ],
+  "products": [
+    {
+      "id": "tiki_dt_1",
+      "name": "Apple iPhone 15 Pro Max 256GB - Chính hãng",
+      "platform": "Tiki",
+      "price": 28500000,
+      "url": "#",
+      "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/d9/b6/42/952b395a128f1f54b68e72758cb43def.png.webp",
+      "category_id": "dien-thoai-may-tinh-bang"
+    },
+    {
+      "id": "shopee_dt_1",
+      "name": "Apple iPhone 15 Pro Max 256GB VN/A",
+      "platform": "Shopee",
+      "price": 28350000,
+      "url": "#",
+      "image_url": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lq4x5wex891o91",
+      "category_id": "dien-thoai-may-tinh-bang"
+    },
+    {
+        "id": "lazada_dt_1",
+        "name": "Samsung Galaxy S24 Ultra 12GB 256GB",
+        "platform": "Lazada",
+        "price": 26990000,
+        "url": "#",
+        "image_url": "https://lzd-img-global.slatic.net/g/p/a5351a0273c52e1c15c8a4170b13d29a.jpg_720x720q80.jpg_.webp",
+        "category_id": "dien-thoai-may-tinh-bang"
+    },
+    {
+        "id": "shopee_dt_2",
+        "name": "Xiaomi 14 5G 12GB 256GB",
+        "platform": "Shopee",
+        "price": 19490000,
+        "url": "#",
+        "image_url": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lswewf31b53p1f",
+        "category_id": "dien-thoai-may-tinh-bang"
+    },
+    {
+        "id": "tiki_tablet_1",
+        "name": "Apple iPad Pro M4 11 inch Wifi 256GB",
+        "platform": "Tiki",
+        "price": 27990000,
+        "url": "#",
+        "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/88/47/f3/0d9c57d74c0521e105349e29a3a2e37e.png.webp",
+        "category_id": "dien-thoai-may-tinh-bang"
+    },
+    {
+      "id": "tiki_tv_1",
+      "name": "Smart Tivi Samsung 4K Crystal UHD 55 inch",
+      "platform": "Tiki",
+      "price": 9890000,
+      "url": "#",
+      "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/5c/d7/3e/22a9a7b752243d63259b34241b711a68.png.webp",
+      "category_id": "tivi-am-thanh"
+    },
+    {
+        "id": "shopee_tv_1",
+        "name": "Google Tivi Sony 4K 65 inch KD-65X80L",
+        "platform": "Shopee",
+        "price": 16100000,
+        "url": "#",
+        "image_url": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpx89g7db6tvc3",
+        "category_id": "tivi-am-thanh"
+    },
+    {
+        "id": "lazada_loa_1",
+        "name": "Loa Bluetooth JBL Charge 5",
+        "platform": "Lazada",
+        "price": 3150000,
+        "url": "#",
+        "image_url": "https://lzd-img-global.slatic.net/g/p/5a92a54b38d38e23f0d4dd2128796838.jpg_720x720q80.jpg_.webp",
+        "category_id": "tivi-am-thanh"
+    },
+    {
+        "id": "tiki_tainghe_1",
+        "name": "Tai nghe Bluetooth Apple AirPods 3",
+        "platform": "Tiki",
+        "price": 4190000,
+        "url": "#",
+        "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/a3/52/b5/1d701cda79313c4962c1613589b8830b.png.webp",
+        "category_id": "tivi-am-thanh"
+    },
+    {
+      "id": "shopee_dl_1",
+      "name": "Máy lạnh Inverter LG 1 HP V10WIN",
+      "platform": "Shopee",
+      "price": 7500000,
+      "url": "#",
+      "image_url": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lquu2k93cfis49",
+      "category_id": "dien-lanh"
+    },
+    {
+        "id": "tiki_dl_1",
+        "name": "Tủ Lạnh Panasonic Inverter 188 lít",
+        "platform": "Tiki",
+        "price": 5990000,
+        "url": "#",
+        "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/f8/f8/e9/87a99684131562b88f34f82bb9b74adf.png.webp",
+        "category_id": "dien-lanh"
+    },
+    {
+        "id": "lazada_dl_1",
+        "name": "Máy giặt Electrolux Inverter 10 kg EWF1024P5SB",
+        "platform": "Lazada",
+        "price": 9450000,
+        "url": "#",
+        "image_url": "https://lzd-img-global.slatic.net/g/p/6d3c32918e95781a7194f1c1f8a8b1a8.jpg_720x720q80.jpg_.webp",
+        "category_id": "dien-lanh"
+    },
+    {
+        "id": "shopee_dl_2",
+        "name": "Điều hòa Casper Inverter 9000 BTU",
+        "platform": "Shopee",
+        "price": 5190000,
+        "url": "#",
+        "image_url": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lq411j4coo7je4",
+        "category_id": "dien-lanh"
+    },
+    {
+        "id": "lazada_gd_1",
+        "name": "Nồi chiên không dầu Lock&Lock EJF357BLK",
+        "platform": "Lazada",
+        "price": 1800000,
+        "url": "#",
+        "image_url": "https://lzd-img-global.slatic.net/g/p/mdc/d134b281f6d3f2a893c54c0e66860d4b.jpg_720x720q80.jpg_.webp",
+        "category_id": "thiet-bi-gia-dung"
+    },
+    {
+        "id": "tiki_gd_1",
+        "name": "Nồi cơm điện cao tần Cuckoo 1.8L",
+        "platform": "Tiki",
+        "price": 3850000,
+        "url": "#",
+        "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/88/2c/52/64a9354093951f286a51d4512595f573.jpg.webp",
+        "category_id": "thiet-bi-gia-dung"
+    },
+    {
+        "id": "shopee_gd_1",
+        "name": "Máy hút bụi cầm tay Dyson V12 Detect Slim",
+        "platform": "Shopee",
+        "price": 16300000,
+        "url": "#",
+        "image_url": "https://down-vn.img.susercontent.com/file/sg-11134201-22120-ub4a7v376vkvb6",
+        "category_id": "thiet-bi-gia-dung"
+    },
+    {
+        "id": "tiki_gd_2",
+        "name": "Bàn ủi hơi nước Philips GC1436",
+        "platform": "Tiki",
+        "price": 580000,
+        "url": "#",
+        "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/9e/15/8e/3c5b364811a00a22e8031d1d368e5473.jpg.webp",
+        "category_id": "thiet-bi-gia-dung"
+    },
+    {
+        "id": "lazada_gd_2",
+        "name": "Robot hút bụi lau nhà Ecovacs Deebot T10",
+        "platform": "Lazada",
+        "price": 8990000,
+        "url": "#",
+        "image_url": "https://lzd-img-global.slatic.net/g/p/6b0a1f0a20e9808a3d548303f295b90f.jpg_720x720q80.jpg_.webp",
+        "category_id": "thiet-bi-gia-dung"
+    },
+    {
+        "id": "tiki_yt_1",
+        "name": "Máy đo huyết áp bắp tay Omron HEM-7121",
+        "platform": "Tiki",
+        "price": 899000,
+        "url": "#",
+        "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/d0/25/74/5971520e5a40a85e8d3c5f47aae451e5.jpg.webp",
+        "category_id": "thiet-bi-y-te-suc-khoe"
+    },
+    {
+        "id": "shopee_yt_1",
+        "name": "Nhiệt kế điện tử hồng ngoại Microlife FR1MF1",
+        "platform": "Shopee",
+        "price": 550000,
+        "url": "#",
+        "image_url": "https://down-vn.img.susercontent.com/file/sg-11134201-22120-7fhm2z2u4wkv69",
+        "category_id": "thiet-bi-y-te-suc-khoe"
+    },
+    {
+        "id": "lazada_yt_1",
+        "name": "Máy tăm nước Lock&Lock Cordless Oral Irrigator",
+        "platform": "Lazada",
+        "price": 1250000,
+        "url": "#",
+        "image_url": "https://lzd-img-global.slatic.net/g/p/09e9f906541f238b9758f8444f6f7b3c.jpg_720x720q80.jpg_.webp",
+        "category_id": "thiet-bi-y-te-suc-khoe"
+    },
+    {
+        "id": "shopee_mp_1",
+        "name": "Son Thỏi MAC Powder Kiss Velvet Blur Slim",
+        "platform": "Shopee",
+        "price": 680000,
+        "url": "#",
+        "image_url": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lkw15s55kpxrf4",
+        "category_id": "thoi-trang-my-pham"
+    },
+    {
+        "id": "tiki_mp_1",
+        "name": "Kem Chống Nắng Anessa Perfect UV Sunscreen 60ml",
+        "platform": "Tiki",
+        "price": 495000,
+        "url": "#",
+        "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/23/43/33/8327a3c357a79f323e20038870503f75.jpg.webp",
+        "category_id": "thoi-trang-my-pham"
+    },
+    {
+        "id": "lazada_tt_1",
+        "name": "Áo Thun Nam Uniqlo Cổ Tròn Ngắn Tay",
+        "platform": "Lazada",
+        "price": 299000,
+        "url": "#",
+        "image_url": "https://lzd-img-global.slatic.net/g/p/f23a5c377f3e1b7a2d4b9f291e779836.jpg_720x720q80.jpg_.webp",
+        "category_id": "thoi-trang-my-pham"
+    },
+    {
+        "id": "tiki_tt_1",
+        "name": "Quần Jeans Levi's 501 Original Fit Nam",
+        "platform": "Tiki",
+        "price": 1790000,
+        "url": "#",
+        "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/ad/9f/8e/d5e3f5d52a78f6c4f0b2f1e6a3c9b7e1.jpg.webp",
+        "category_id": "thoi-trang-my-pham"
+    },
+    {
+        "id": "shopee_mb_1",
+        "name": "Tã Quần Huggies Platinum Nature Made Size L",
+        "platform": "Shopee",
+        "price": 345000,
+        "url": "#",
+        "image_url": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lki2f3t1mm9q64",
+        "category_id": "me-va-be"
+    },
+    {
+        "id": "lazada_mb_1",
+        "name": "Sữa bột cho bé Enfagrow A+ 4 830g",
+        "platform": "Lazada",
+        "price": 460000,
+        "url": "#",
+        "image_url": "https://lzd-img-global.slatic.net/g/p/e3f1b4c9a6d7f0b8a3c5d6e7f8a9b0c1.jpg_720x720q80.jpg_.webp",
+        "category_id": "me-va-be"
+    },
+    {
+        "id": "tiki_mb_1",
+        "name": "Xe đẩy em bé Gluck Baby",
+        "platform": "Tiki",
+        "price": 1150000,
+        "url": "#",
+        "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/b2/8e/f3/e4d1f2b1c8a7d6e5f3b4c3a2d1e0a9b8.jpg.webp",
+        "category_id": "me-va-be"
+    },
+    {
+        "id": "shopee_mb_2",
+        "name": "Máy hút sữa điện đôi Philips Avent",
+        "platform": "Shopee",
+        "price": 3890000,
+        "url": "#",
+        "image_url": "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lk3h4v1x5x218c",
+        "category_id": "me-va-be"
+    },
+    {
+        "id": "lazada_mb_2",
+        "name": "Ghế ngồi ô tô cho bé Joie",
+        "platform": "Lazada",
+        "price": 2500000,
+        "url": "#",
+        "image_url": "https://lzd-img-global.slatic.net/g/p/8a8b1c2d3e4f5a6b7c8d9e0f1a2b3c4d.jpg_720x720q80.jpg_.webp",
+        "category_id": "me-va-be"
+    }
+  ]
+}
