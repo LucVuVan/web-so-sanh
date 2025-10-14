@@ -4,24 +4,83 @@ body {
     background-color: #f4f4f4;
 }
 
-header {
-    background-color: #1e88e5;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-}
-
 main {
     display: flex;
     padding: 1rem;
 }
 
+/* --- Header & Logo --- */
+header {
+    background-color: #d32f2f;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* <-- Dòng quan trọng nhất */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    gap: 0.5rem;
+}
+/* --- Search Bar --- */
+.search-bar {
+    display: flex;
+    width: 50%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 50px;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+#search-input {
+    border: none;
+    outline: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    width: 100%;
+    background: none;
+}
+
+#search-button {
+    border: none;
+    background-color: #f0f0f0;
+    padding: 0 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-button:hover {
+    background-color: #e0e0e0;
+}
+
+#search-button::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333'%3E%3Cpath d='M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* --- Category Navigation --- */
 #category-nav {
     width: 200px;
     margin-right: 1rem;
 }
 
-#category-nav button {
+#category-nav button.category-button {
     display: block;
     width: 100%;
     padding: 0.8rem;
@@ -31,13 +90,21 @@ main {
     text-align: left;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, border-color 0.2s;
 }
 
-#category-nav button:hover {
+#category-nav button.category-button:hover {
     background-color: #e0e0e0;
 }
 
+#category-nav button.category-button.active {
+    background-color: #d32f2f !important;
+    color: white !important;
+    border-color: #d32f2f !important;
+    font-weight: bold;
+}
+
+/* --- Product List & Cards --- */
 #product-list {
     flex-grow: 1;
     display: grid;
@@ -55,10 +122,13 @@ main {
     flex-direction: column;
 }
 
-.product-card img {
+.product-card img.product-image {
     width: 100%;
     height: 200px;
     object-fit: contain;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #eee;
 }
 
 .product-info {
@@ -83,7 +153,7 @@ main {
     font-size: 1.2rem;
     font-weight: bold;
     color: #d32f2f;
-    margin-top: auto; /* Đẩy giá và nút mua xuống dưới */
+    margin-top: auto;
 }
 
 .buy-button {
@@ -96,134 +166,30 @@ main {
     border-radius: 5px;
     margin-top: 1rem;
 }
-/* Thêm/cập nhật đoạn này trong style.css */
-.product-card img.product-image { /* Chỉ định rõ class để tránh xung đột */
-    width: 100%;
-    height: 200px; /* Chiều cao cố định cho ảnh */
-    object-fit: contain; /* Giữ tỷ lệ và căn giữa ảnh, không cắt xén */
-    padding: 10px; /* Tạo khoảng trống quanh ảnh */
-    background-color: white; /* Nền trắng cho khu vực ảnh */
-    border-bottom: 1px solid #eee; /* Đường kẻ nhẹ phía dưới ảnh */
-}
-
-/* Các đoạn CSS khác giữ nguyên hoặc bạn có thể tùy chỉnh thêm */
-
-/* Thêm CSS cho nút danh mục để có trạng thái active */
-#category-nav button.category-button {
-    display: block;
-    width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 0.5rem;
-    border: 1px solid #ddd;
-    background-color: white;
-    text-align: left;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.2s, border-color 0.2s;
-}
-
-#category-nav button.category-button:hover {
-    background-color: #e0e0e0;
-}
-
-/* Nếu bạn muốn thêm trạng thái active cho nút danh mục */
-#category-nav button.category-button.active {
-    background-color: #1e88e5;
-    color: white;
-    border-color: #1e88e5;
-}
-/* DÁN TOÀN BỘ ĐOẠN NÀY VÀO CUỐI FILE STYLE.CSS */
-
-/* --- Header & Logo --- */
-header {
-    background-color: #007bff; /* Một màu xanh dương hiện đại hơn */
-    padding: 1rem 2rem; /* Tăng khoảng trống bên trong */
-    display: flex; /* Sử dụng Flexbox để căn chỉnh */
-    align-items: center; /* Căn giữa các item theo chiều dọc */
-    justify-content: space-between; /* Đẩy logo và thanh tìm kiếm ra 2 bên */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ nhẹ */
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    text-decoration: none; /* Bỏ gạch chân của thẻ a */
-    gap: 0.5rem; /* Khoảng cách giữa icon và chữ */
-}
-
-/* --- Search Bar --- */
-.search-bar {
-    display: flex; /* Dùng flexbox để input và button nằm trên 1 hàng */
-    width: 50%; /* Chiếm 50% chiều rộng header */
-    max-width: 600px; /* Nhưng không quá to trên màn hình lớn */
-    background-color: white;
-    border-radius: 50px; /* Bo tròn để tạo thành hình viên thuốc */
-    overflow: hidden; /* Ẩn phần thừa của các item bên trong */
-}
-
-#search-input {
-    border: none;
-    outline: none; /* Bỏ viền xanh khi focus */
-    padding: 0.8rem 1.2rem;
-    font-size: 1rem;
-    width: 100%; /* Chiếm toàn bộ không gian còn lại */
-    background: none;
-}
-
-#search-button {
-    border: none;
-    background-color: #f0f0f0;
-    padding: 0 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#search-button:hover {
-    background-color: #e0e0e0;
-}
-
-/* Thêm icon kính lúp cho nút tìm kiếm */
-#search-button::before {
-    content: '';
-    display: block;
-    width: 20px;
-    height: 20px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333'%3E%3Cpath d='M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-/* DÁN TOÀN BỘ ĐOẠN NÀY VÀO CUỐI FILE STYLE.CSS */
 
 /* --- Footer --- */
 footer {
-    background-color: #f8f9fa; /* Màu nền xám rất nhạt, sang trọng */
-    color: #555; /* Màu chữ xám đậm */
-    margin-top: 3rem; /* Khoảng cách với phần sản phẩm */
-    padding-top: 2.5rem; /* Khoảng đệm phía trên */
-    border-top: 1px solid #e7e7e7; /* Một đường kẻ mỏng phân cách */
+    background-color: #f8f9fa;
+    color: #555;
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid #e7e7e7;
     font-size: 0.9rem;
 }
 
 .footer-container {
-    max-width: 1200px; /* Giới hạn độ rộng nội dung */
-    margin: 0 auto; /* Căn giữa */
-    padding: 0 2rem; /* Khoảng đệm hai bên */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Cho phép các cột xuống hàng trên màn hình nhỏ */
-    gap: 2rem; /* Khoảng cách giữa các cột */
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .footer-column {
-    flex: 1; /* Các cột chia sẻ không gian */
-    min-width: 220px; /* Độ rộng tối thiểu trước khi xuống hàng */
+    flex: 1;
+    min-width: 220px;
 }
 
 .footer-column h4 {
@@ -233,37 +199,38 @@ footer {
     font-weight: 600;
 }
 
-/* Tùy chỉnh riêng cho cột logo */
 .footer-column.info .logo {
     margin-bottom: 1rem;
     font-size: 1.5rem;
-    color: #333; /* Màu chữ logo đậm hơn */
+    color: #333;
 }
+
 .footer-column.info p {
     margin: 0.5rem 0;
     line-height: 1.6;
 }
 
-/* Tùy chỉnh cho cột link */
 .footer-column ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 .footer-column ul li {
     margin-bottom: 0.7rem;
 }
+
 .footer-column ul a {
     color: #555;
     text-decoration: none;
     transition: color 0.2s ease;
 }
+
 .footer-column ul a:hover {
-    color: #007bff; /* Đổi màu khi di chuột qua */
+    color: #007bff;
     text-decoration: underline;
 }
 
-/* Phần bản quyền ở cuối cùng */
 .footer-bottom {
     text-align: center;
     padding: 1.5rem 0;
@@ -271,170 +238,4 @@ footer {
     border-top: 1px solid #e7e7e7;
     font-size: 0.85rem;
     color: #888;
-}
-/* DÁN TOÀN BỘ ĐOẠN NÀY VÀO CUỐI FILE STYLE.CSS */
-
-/* --- Đổi màu Header sang Đỏ --- */
-header {
-    background-color: #d32f2f; /* Màu đỏ chủ đạo */
-    justify-content: normal; /* Bỏ justify-content cũ để sắp xếp lại */
-}
-
-.logo {
-    margin-right: 2rem; /* Tạo khoảng cách giữa logo và thanh tìm kiếm */
-}
-
-/* --- Tùy chỉnh lại Thanh tìm kiếm --- */
-.search-bar {
-    flex-grow: 1; /* Cho phép thanh tìm kiếm co giãn lấp đầy không gian */
-}
-
-/* --- Style cho nút Đăng nhập --- */
-.header-actions {
-    margin-left: 2rem; /* Khoảng cách với thanh tìm kiếm */
-}
-
-.login-button {
-    background-color: white;
-    color: #d32f2f; /* Chữ màu đỏ */
-    padding: 0.7rem 1.5rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9rem;
-    transition: all 0.2s ease-in-out;
-    white-space: nowrap; /* Không cho chữ "Đăng nhập" xuống dòng */
-}
-
-.login-button:hover {
-    background-color: #f1f1f1;
-    transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi di chuột */
-}
-/* DÁN TOÀN BỘ ĐOẠN NÀY VÀO CUỐI FILE STYLE.CSS */
-
-/* --- Modal Overlay & Content --- */
-.modal-overlay {
-    position: fixed; /* Luôn cố định trên màn hình */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Lớp nền đen mờ */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Luôn nằm trên cùng */
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-/* Lớp để ẩn modal đi */
-.modal-overlay.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.modal-content {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    width: 90%;
-    max-width: 400px; /* Độ rộng tối đa của form */
-    position: relative; /* Để định vị nút close */
-    transform: translateY(0);
-    transition: transform 0.3s ease;
-}
-
-.modal-overlay.hidden .modal-content {
-    transform: translateY(-20px); /* Hiệu ứng trượt lên khi ẩn */
-}
-
-/* Nút X để đóng */
-.close-button {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #aaa;
-    cursor: pointer;
-}
-
-/* --- Form Elements --- */
-.modal-content h2 {
-    margin-top: 0;
-    margin-bottom: 2rem;
-    text-align: center;
-    color: #333;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: #555;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-.forgot-password {
-    display: block;
-    text-align: right;
-    margin-bottom: 1.5rem;
-    font-size: 0.9rem;
-    color: #007bff;
-    text-decoration: none;
-}
-
-.submit-login {
-    width: 100%;
-    padding: 0.9rem;
-    border: none;
-    border-radius: 4px;
-    background-color: #d32f2f; /* Màu đỏ chủ đạo */
-    color: white;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.submit-login:hover {
-    background-color: #b71c1c; /* Màu đỏ đậm hơn khi hover */
-}
-
-.signup-link {
-    text-align: center;
-    margin-top: 1.5rem;
-    color: #555;
-}
-
-.signup-link a {
-    color: #ff0000;
-    font-weight: bold;
-    text-decoration: none;
-}
-/* DÁN ĐOẠN NÀY VÀO CUỐI FILE STYLE.CSS */
-
-/* ĐẢM BẢO ĐOẠN NÀY NẰM Ở CUỐI CÙNG TRONG FILE style.css */
-
-/* --- Style cho nút danh mục khi được chọn (active) --- */
-#category-nav .category-button.active {
-    background-color: #d32f2f !important; /* Thêm !important để tăng độ ưu tiên */
-    color: white !important;
-    border-color: #d32f2f !important;
-    font-weight: bold;
 }
