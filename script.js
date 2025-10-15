@@ -1,4 +1,5 @@
-// Chờ cho toàn bộ nội dung HTML được tải xong rồi mới chạy script
+// THAY THẾ TOÀN BỘ FILE SCRIPT.JS BẰNG CODE NÀY
+
 document.addEventListener('DOMContentLoaded', () => {
     
     // Khai báo các biến tham chiếu đến các phần tử HTML
@@ -6,10 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const productList = document.getElementById('product-list');
     const searchInput = document.getElementById('search-input');
     const searchButton = document.getElementById('search-button');
+    const paginationControls = document.getElementById('pagination-controls');
     
     // Khai báo các biến trạng thái
-    let allProducts = []; // Biến để lưu trữ tất cả sản phẩm
-    let currentCategory = null; // Biến để theo dõi danh mục hiện tại
+    let allProducts = [];
+    let currentProducts = []; // Danh sách sản phẩm sau khi đã lọc
+    let currentPage = 1;
+    const itemsPerPage = 25; // 5 hàng x 5 sản phẩm = 25
 
     // Hàm để lấy dữ liệu sản phẩm từ file JSON
     async function fetchData() {
@@ -17,28 +21,25 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch('mock-data.json');
             const data = await response.json();
             allProducts = data.products;
+            currentProducts = allProducts; // Ban đầu, hiển thị tất cả
             displayCategories(data.categories);
-            displayProducts(allProducts); // Hiển thị tất cả sản phẩm lúc đầu
+            renderCurrentPage();
         } catch (error) {
             console.error('Lỗi khi tải dữ liệu:', error);
             productList.innerHTML = '<p>Không thể tải dữ liệu sản phẩm.</p>';
         }
     }
 
-    // Hàm để hiển thị các nút danh mục
     function displayCategories(categories) {
+        // Xóa hết nội dung cũ và thêm lại tiêu đề
+        categoryNav.innerHTML = '<h2>Danh mục sản phẩm</h2>';
+
         // Tạo và thêm nút "Tất cả sản phẩm"
         const allButton = document.createElement('button');
         allButton.textContent = 'Tất cả sản phẩm';
-        allButton.classList.add('category-button', 'active'); // Mặc định active lúc đầu
+        allButton.classList.add('category-button', 'active');
         allButton.onclick = (event) => {
-            // Xóa class 'active' khỏi tất cả các nút
-            document.querySelectorAll('.category-button').forEach(btn => btn.classList.remove('active'));
-            // Thêm class 'active' cho nút vừa bấm
-            event.currentTarget.classList.add('active');
-            
-            currentCategory = null;
-            filterAndDisplayProducts();
+            handleFilter(event.currentTarget, null);
         };
         categoryNav.appendChild(allButton);
         
@@ -48,70 +49,95 @@ document.addEventListener('DOMContentLoaded', () => {
             button.textContent = category.name;
             button.classList.add('category-button');
             button.onclick = (event) => {
-                document.querySelectorAll('.category-button').forEach(btn => btn.classList.remove('active'));
-                event.currentTarget.classList.add('active');
-
-                currentCategory = category.id;
-                filterAndDisplayProducts();
+                handleFilter(event.currentTarget, category.id);
             };
             categoryNav.appendChild(button);
         });
     }
 
-    // Hàm để hiển thị danh sách sản phẩm ra giao diện
-    function displayProducts(products) {
-        productList.innerHTML = ''; // Xóa các sản phẩm cũ
-        
-        if (products.length === 0) {
-            productList.innerHTML = '<p>Không tìm thấy sản phẩm nào.</p>';
-            return;
-        }
+    // Hàm xử lý chung cho việc lọc sản phẩm
+    function handleFilter(clickedButton, categoryId) {
+        // Cập nhật trạng thái active cho nút
+        document.querySelectorAll('.category-button').forEach(btn => btn.classList.remove('active'));
+        clickedButton.classList.add('active');
 
-        products.forEach(product => {
-            const productCard = document.createElement('div');
-            productCard.className = 'product-card';
-            
-            productCard.innerHTML = `
-                <img src="${product.image_url}" alt="${product.name}" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-name">${product.name}</h3>
-                    <p class="product-platform">${product.platform}</p>
-                    <p class="product-price">${product.price.toLocaleString('vi-VN')} ₫</p>
-                    <a href="${product.url}" target="_blank" class="buy-button">So sánh giá</a>
-                </div>
-            `;
-            productList.appendChild(productCard);
-        });
-    }
-
-    // Hàm lọc và hiển thị lại sản phẩm dựa trên danh mục và từ khóa
-    function filterAndDisplayProducts() {
         const searchTerm = searchInput.value.toLowerCase();
-        let filteredProducts = allProducts;
+        let filtered = allProducts;
 
-        // Lọc theo danh mục đã chọn
-        if (currentCategory) {
-            filteredProducts = filteredProducts.filter(p => p.category_id === currentCategory);
+        // Lọc theo danh mục
+        if (categoryId) {
+            filtered = filtered.filter(p => p.category_id === categoryId);
         }
 
         // Lọc tiếp theo từ khóa tìm kiếm
         if (searchTerm) {
-            filteredProducts = filteredProducts.filter(p => 
-                p.name.toLowerCase().includes(searchTerm)
-            );
+            filtered = filtered.filter(p => p.name.toLowerCase().includes(searchTerm));
         }
         
-        displayProducts(filteredProducts);
+        currentProducts = filtered;
+        currentPage = 1; // Reset về trang 1 mỗi khi có bộ lọc mới
+        renderCurrentPage();
+    }
+    
+    // Hàm để render sản phẩm và các nút chuyển trang
+    function renderCurrentPage() {
+        displayProducts();
+        setupPagination();
+    }
+
+    // Hàm để hiển thị danh sách sản phẩm của trang hiện tại
+    function displayProducts() {
+        productList.innerHTML = '';
+        
+        if (currentProducts.length === 0) {
+            productList.innerHTML = '<p>Không tìm thấy sản phẩm nào.</p>';
+            return;
+        }
+
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const pageProducts = currentProducts.slice(startIndex, endIndex);
+
+        pageProducts.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.className = 'product-card';
+            productCard.innerHTML = `<a href="product.html?id=${product.id}" class="product-card-link"><img src="${product.image_url}" alt="${product.name}" class="product-image"><div class="product-info"><h3 class="product-name">${product.name}</h3><p class="product-platform">${product.platform}</p><p class="product-price">${product.price.toLocaleString('vi-VN')} ₫</p><span class="buy-button">Xem chi tiết</span></div></a>`;
+            productList.appendChild(productCard);
+        });
+    }
+
+    // Hàm để tạo và quản lý các nút chuyển trang
+    function setupPagination() {
+        paginationControls.innerHTML = '';
+        const pageCount = Math.ceil(currentProducts.length / itemsPerPage);
+
+        for (let i = 1; i <= pageCount; i++) {
+            const button = document.createElement('button');
+            button.innerText = i;
+            button.classList.add('page-button');
+            if (i === currentPage) {
+                button.classList.add('active');
+            }
+            button.addEventListener('click', () => {
+                currentPage = i;
+                renderCurrentPage();
+                window.scrollTo(0, 0); // Cuộn lên đầu trang khi chuyển trang
+            });
+            paginationControls.appendChild(button);
+        }
     }
 
     // Gắn sự kiện cho thanh tìm kiếm
-    searchButton.addEventListener('click', filterAndDisplayProducts);
+    searchButton.addEventListener('click', () => {
+        const activeCategoryButton = document.querySelector('.category-button.active');
+        handleFilter(activeCategoryButton, activeCategoryButton.textContent === 'Tất cả sản phẩm' ? null : currentProducts[0]?.category_id);
+    });
     searchInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
-            filterAndDisplayProducts();
+            searchButton.click();
         }
     });
 
-    // Bắt đầu chạy ứng dụng bằng cách lấy dữ liệu
+    // Bắt đầu chạy ứng dụng
     fetchData();
 });

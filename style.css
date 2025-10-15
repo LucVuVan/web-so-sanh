@@ -108,7 +108,8 @@ header {
 #product-list {
     flex-grow: 1;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Quan trọng: Ra lệnh chỉ hiển thị 5 cột */
+    grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
 }
 
@@ -238,4 +239,127 @@ footer {
     border-top: 1px solid #e7e7e7;
     font-size: 0.85rem;
     color: #888;
+}
+
+/* DÁN VÀO CUỐI FILE STYLE.CSS */
+
+/* --- Styling cho trang chi tiết sản phẩm --- */
+#product-detail-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    display: flex;
+    gap: 2rem;
+}
+
+.product-detail-image {
+    flex: 1;
+    max-width: 40%;
+}
+
+.product-detail-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-detail-info {
+    flex: 1;
+}
+
+.product-title {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.product-platform-detail {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.product-price-detail {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #d32f2f;
+    margin-bottom: 2rem;
+}
+
+.buy-now-button {
+    display: inline-block;
+    background-color: #d32f2f;
+    color: white;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    margin-bottom: 2rem;
+}
+
+.buy-now-button:hover {
+    background-color: #b71c1c;
+}
+
+.product-description h2 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.product-description p {
+    line-height: 1.6;
+    color: #333;
+}
+
+.loading-text {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+/* --- CSS cho các nút chuyển trang --- */
+#pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.page-button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.page-button:hover {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+}
+
+/* Style cho nút trang hiện tại */
+.page-button.active {
+    background-color: #d32f2f;
+    color: white;
+    border-color: #d32f2f;
+    font-weight: bold;
+}
+/* --- CSS cho các nút chuyển trang --- */
+#pagination-controls {
+    display: flex;
+    justify-content: center; /* Quan trọng: Căn giữa theo chiều ngang */
+    align-items: center;
+    padding: 2rem 0;
 }
