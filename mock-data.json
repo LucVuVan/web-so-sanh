@@ -278,6 +278,501 @@
         "url": "#",
         "image_url": "https://lzd-img-global.slatic.net/g/p/8a8b1c2d3e4f5a6b7c8d9e0f1a2b3c4d.jpg_720x720q80.jpg_.webp",
         "category_id": "me-va-be"
+    },
+    {
+        "id": "tiki_dt_2",
+        "name": "OPPO Reno11 F 5G 8GB/256GB",
+        "platform": "Tiki",
+        "price": 8490000,
+        "url": "#",
+        "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/c6/13/27/5e3f4a1e9c8e8a3a3e1c6b3e6e3c6b1e.png.webp",
+        "category_id": "dien-thoai-may-tinh-bang"
+    },
+    {
+        "id": "lazada_tablet_2",
+        "name": "Samsung Galaxy Tab S9 FE Wifi 6GB 128GB",
+        "platform": "Lazada",
+        "price": 8290000,
+        "url": "#",
+        "image_url": "https://lzd-img-global.slatic.net/g/p/7c0c1b4e2d3e5a5c5b5e7d8f9a9c0d1b.jpg_720x720q80.jpg_.webp",
+        "category_id": "dien-thoai-may-tinh-bang"
+    },
+    {
+        "id": "shopee_dt_3",
+        "name": "Realme Note 50 4GB/128GB",
+        "platform": "Shopee",
+        "price": 2890000,
+        "url": "#",
+        "image_url": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lry3j2w3j2p12d",
+        "category_id": "dien-thoai-may-tinh-bang"
+    },
+    {
+        "id": "tiki_tv_2",
+        "name": "Smart Tivi LG 4K 55 inch 55UT8050PSB",
+        "platform": "Tiki",
+        "price": 10990000,
+        "url": "#",
+        "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/0a/3b/1c/0d9c57d74c0521e105349e29a3a2e37e.png.webp",
+        "category_id": "tivi-am-thanh"
+    },
+    {
+        "id": "lazada_soundbar_1",
+        "name": "Loa thanh Soundbar Sony HT-S20R 5.1ch",
+        "platform": "Lazada",
+        "price": 4490000,
+        "url": "#",
+        "image_url": "https://lzd-img-global.slatic.net/g/p/9b1b4b5e6d7e8f9a8c8b7a6d5c5b4b3b.jpg_720x720q80.jpg_.webp",
+        "category_id": "tivi-am-thanh"
+    },
+    {
+        "id": "shopee_loa_2",
+        "name": "Loa Bluetooth Marshall Willen",
+        "platform": "Shopee",
+        "price": 2790000,
+        "url": "#",
+        "image_url": "https://down-vn.img.susercontent.com/file/sg-11134201-22100-qj2v1w1vj2ivf0",
+        "category_id": "tivi-am-thanh"
+    },
+    {
+        "id": "tiki_dl_2",
+        "name": "Máy lọc không khí Sharp FP-J30E-A",
+        "platform": "Tiki",
+        "price": 2190000,
+        "url": "#",
+        "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/5e/6f/7d/8e9a8b7c6d5e4f3d2c1b0a9b8c7d6e5f.png.webp",
+        "category_id": "dien-lanh"
+    },
+    {
+        "id": "shopee_dl_3",
+        "name": "Quạt điều hòa Sunhouse SHD7721",
+        "platform": "Shopee",
+        "price": 2850000,
+        "url": "#",
+        "image_url": "https://down-vn.img.susercontent.com/file/sg-11134201-22120-u4a7v376vkvb69",
+        "category_id": "dien-lanh"
+    },
+    {
+        "id": "lazada_dl_2",
+        "name": "Tủ đông Sanaky 200 lít VH-2599A1",
+        "platform": "Lazada",
+        "price": 4990000,
+        "url": "#",
+        "image_url": "https://lzd-img-global.slatic.net/g/p/6d3c32918e95781a7194f1c1f8a8b1a8.jpg_720x720q80.jpg_.webp",
+        "category_id": "dien-lanh"
+    },
+    {
+        "id": "tiki_gd_3",
+        "name": "Máy xay sinh tố Philips HR2223/00",
+        "platform": "Tiki",
+        "price": 1490000,
+        "url": "#",
+        "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/9e/15/8e/3c5b364811a00a22e8031d1d368e5473.jpg.webp",
+        "category_id": "thiet-bi-gia-dung"
+    },
+    {
+        "id": "lazada_gd_3",
+        "name": "Lò vi sóng Sharp R-205VN-S 20 lít",
+        "platform": "Lazada",
+        "price": 1290000,
+        "url": "#",
+        "image_url": "https://lzd-img-global.slatic.net/g/p/6b0a1f0a20e9808a3d548303f295b90f.jpg_720x720q80.jpg_.webp",
+        "category_id": "thiet-bi-gia-dung"
+    },
+    {
+        "id": "shopee_gd_3",
+        "name": "Máy pha cà phê Delonghi EC685.M",
+        "platform": "Shopee",
+        "price": 6490000,
+        "url": "#",
+        "image_url": "https://down-vn.img.susercontent.com/file/sg-11134201-22120-ub4a7v376vkvb6",
+        "category_id": "thiet-bi-gia-dung"
+    },
+    {
+        "id": "tiki_yt_2",
+        "name": "Cân điện tử sức khỏe Xiaomi Mi Scale 2",
+        "platform": "Tiki",
+        "price": 299000,
+        "url": "#",
+        "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/d0/25/74/5971520e5a40a85e8d3c5f47aae451e5.jpg.webp",
+        "category_id": "thiet-bi-y-te-suc-khoe"
+    },
+    {
+        "id": "shopee_yt_2",
+        "name": "Máy massage cổ vai gáy SKG K5 Pro",
+        "platform": "Shopee",
+        "price": 1190000,
+        "url": "#",
+        "image_url": "https://down-vn.img.susercontent.com/file/sg-11134201-22120-7fhm2z2u4wkv69",
+        "category_id": "thiet-bi-y-te-suc-khoe"
+    },
+    {
+        "id": "lazada_yt_2",
+        "name": "Bàn chải điện Oral-B Pro 2 2000",
+        "platform": "Lazada",
+        "price": 1450000,
+        "url": "#",
+        "image_url": "https://lzd-img-global.slatic.net/g/p/09e9f906541f238b9758f8444f6f7b3c.jpg_720x720q80.jpg_.webp",
+        "category_id": "thiet-bi-y-te-suc-khoe"
+    },
+    {
+        "id": "shopee_mp_2",
+        "name": "Nước Hoa Dior Sauvage EDP 100ml",
+        "platform": "Shopee",
+        "price": 2850000,
+        "url": "#",
+        "image_url": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lkw15s55kpxrf4",
+        "category_id": "thoi-trang-my-pham"
+    },
+    {
+        "id": "tiki_mp_2",
+        "name": "Kem nền L'Oréal Infallible 24H Fresh Wear",
+        "platform": "Tiki",
+        "price": 289000,
+        "url": "#",
+        "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/23/43/33/8327a3c357a79f323e20038870503f75.jpg.webp",
+        "category_id": "thoi-trang-my-pham"
+    },
+    {
+        "id": "lazada_tt_2",
+        "name": "Giày thể thao Adidas Ultraboost Light",
+        "platform": "Lazada",
+        "price": 4200000,
+        "url": "#",
+        "image_url": "https://lzd-img-global.slatic.net/g/p/f23a5c377f3e1b7a2d4b9f291e779836.jpg_720x720q80.jpg_.webp",
+        "category_id": "thoi-trang-my-pham"
+    },
+    {
+        "id": "shopee_tt_2",
+        "name": "Túi xách Charles & Keith Gabine",
+        "platform": "Shopee",
+        "price": 1990000,
+        "url": "#",
+        "image_url": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lki2f3t1mm9q64",
+        "category_id": "thoi-trang-my-pham"
+    },
+    {
+        "id": "tiki_mb_2",
+        "name": "Bình sữa Moyuum PPSU 270ml",
+        "platform": "Tiki",
+        "price": 385000,
+        "url": "#",
+        "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/b2/8e/f3/e4d1f2b1c8a7d6e5f3b4c3a2d1e0a9b8.jpg.webp",
+        "category_id": "me-va-be"
+    },
+    {
+        "id": "lazada_mb_3",
+        "name": "Đồ chơi Lego Classic 10698",
+        "platform": "Lazada",
+        "price": 1399000,
+        "url": "#",
+        "image_url": "https://lzd-img-global.slatic.net/g/p/e3f1b4c9a6d7f0b8a3c5d6e7f8a9b0c1.jpg_720x720q80.jpg_.webp",
+        "category_id": "me-va-be"
+    },
+    {
+        "id": "shopee_mb_3",
+        "name": "Ghế ăn dặm cho bé Chilux Grow V",
+        "platform": "Shopee",
+        "price": 1590000,
+        "url": "#",
+        "image_url": "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lk3h4v1x5x218c",
+        "category_id": "me-va-be"
+    },
+    {
+        "id": "tiki_mb_3",
+        "name": "Sữa tắm gội Cetaphil Baby 230ml",
+        "platform": "Tiki",
+        "price": 165000,
+        "url": "#",
+        "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/88/2c/52/64a9354093951f286a51d4512595f573.jpg.webp",
+        "category_id": "me-va-be"
+    },
+    {
+      "id": "lazada_dt_3",
+      "name": "Google Pixel 8 Pro 128GB",
+      "platform": "Lazada",
+      "price": 22500000,
+      "url": "#",
+      "image_url": "https://lzd-img-global.slatic.net/g/p/a9b8c7d6e5f4d3c2b1a09b8c7d6e5f4d.jpg_720x720q80.jpg_.webp",
+      "category_id": "dien-thoai-may-tinh-bang"
+    },
+    {
+      "id": "tiki_tv_3",
+      "name": "Smart Tivi QLED 4K 65 inch Samsung QA65Q60B",
+      "platform": "Tiki",
+      "price": 15900000,
+      "url": "#",
+      "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/3e/1c/0d/9c57d74c0521e105349e29a3a2e37e88.png.webp",
+      "category_id": "tivi-am-thanh"
+    },
+    {
+      "id": "shopee_dl_4",
+      "name": "Máy lọc không khí Xiaomi Mi Air Purifier 4 Lite",
+      "platform": "Shopee",
+      "price": 2790000,
+      "url": "#",
+      "image_url": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lq411j4coo7je4",
+      "category_id": "dien-lanh"
+    },
+    {
+      "id": "lazada_gd_4",
+      "name": "Bếp từ đôi Kangaroo KG499N",
+      "platform": "Lazada",
+      "price": 2350000,
+      "url": "#",
+      "image_url": "https://lzd-img-global.slatic.net/g/p/mdc/d134b281f6d3f2a893c54c0e66860d4b.jpg_720x720q80.jpg_.webp",
+      "category_id": "thiet-bi-gia-dung"
+    },
+    {
+      "id": "tiki_yt_3",
+      "name": "Ghế massage toàn thân Kingsport G78",
+      "platform": "Tiki",
+      "price": 19800000,
+      "url": "#",
+      "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/d0/25/74/5971520e5a40a85e8d3c5f47aae451e5.jpg.webp",
+      "category_id": "thiet-bi-y-te-suc-khoe"
+    },
+    {
+      "id": "shopee_mp_3",
+      "name": "Phấn nước Cushion Clio Kill Cover",
+      "platform": "Shopee",
+      "price": 450000,
+      "url": "#",
+      "image_url": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lkw15s55kpxrf4",
+      "category_id": "thoi-trang-my-pham"
+    },
+    {
+      "id": "lazada_tt_3",
+      "name": "Đồng hồ nam Casio G-Shock GA-2100-1A1",
+      "platform": "Lazada",
+      "price": 2600000,
+      "url": "#",
+      "image_url": "https://lzd-img-global.slatic.net/g/p/f23a5c377f3e1b7a2d4b9f291e779836.jpg_720x720q80.jpg_.webp",
+      "category_id": "thoi-trang-my-pham"
+    },
+    {
+      "id": "tiki_mb_4",
+      "name": "Nôi cũi cho bé Graco Pack 'n Play",
+      "platform": "Tiki",
+      "price": 2200000,
+      "url": "#",
+      "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/b2/8e/f3/e4d1f2b1c8a7d6e5f3b4c3a2d1e0a9b8.jpg.webp",
+      "category_id": "me-va-be"
+    },
+    {
+      "id": "shopee_dt_4",
+      "name": "OnePlus 12 5G 16GB/512GB",
+      "platform": "Shopee",
+      "price": 21990000,
+      "url": "#",
+      "image_url": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lry3j2w3j2p12d",
+      "category_id": "dien-thoai-may-tinh-bang"
+    },
+    {
+      "id": "lazada_tv_4",
+      "name": "Android Tivi Casper 4K 50 inch 50UGA611",
+      "platform": "Lazada",
+      "price": 6990000,
+      "url": "#",
+      "image_url": "https://lzd-img-global.slatic.net/g/p/9b1b4b5e6d7e8f9a8c8b7a6d5c5b4b3b.jpg_720x720q80.jpg_.webp",
+      "category_id": "tivi-am-thanh"
+    },
+    {
+      "id": "tiki_dl_4",
+      "name": "Quạt cây Midea FS40-15QR",
+      "platform": "Tiki",
+      "price": 890000,
+      "url": "#",
+      "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/5e/6f/7d/8e9a8b7c6d5e4f3d2c1b0a9b8c7d6e5f.png.webp",
+      "category_id": "dien-lanh"
+    },
+    {
+      "id": "shopee_gd_4",
+      "name": "Máy ép chậm Hurom H200",
+      "platform": "Shopee",
+      "price": 9800000,
+      "url": "#",
+      "image_url": "https://down-vn.img.susercontent.com/file/sg-11134201-22120-u4a7v376vkvb69",
+      "category_id": "thiet-bi-gia-dung"
+    },
+    {
+      "id": "lazada_yt_3",
+      "name": "Xe lăn có bô Lucass X9",
+      "platform": "Lazada",
+      "price": 1850000,
+      "url": "#",
+      "image_url": "https://lzd-img-global.slatic.net/g/p/09e9f906541f238b9758f8444f6f7b3c.jpg_720x720q80.jpg_.webp",
+      "category_id": "thiet-bi-y-te-suc-khoe"
+    },
+    {
+      "id": "tiki_mp_3",
+      "name": "Serum La Roche-Posay Hyalu B5",
+      "platform": "Tiki",
+      "price": 850000,
+      "url": "#",
+      "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/23/43/33/8327a3c357a79f323e20038870503f75.jpg.webp",
+      "category_id": "thoi-trang-my-pham"
+    },
+    {
+      "id": "shopee_tt_3",
+      "name": "Giày Sneaker MLB Chunky Liner",
+      "platform": "Shopee",
+      "price": 2990000,
+      "url": "#",
+      "image_url": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lki2f3t1mm9q64",
+      "category_id": "thoi-trang-my-pham"
+    },
+    {
+      "id": "lazada_mb_4",
+      "name": "Khăn ướt Bobby không mùi",
+      "platform": "Lazada",
+      "price": 35000,
+      "url": "#",
+      "image_url": "https://lzd-img-global.slatic.net/g/p/e3f1b4c9a6d7f0b8a3c5d6e7f8a9b0c1.jpg_720x720q80.jpg_.webp",
+      "category_id": "me-va-be"
+    },
+    {
+      "id": "tiki_dt_5",
+      "name": "Máy đọc sách Kindle Paperwhite 5",
+      "platform": "Tiki",
+      "price": 3790000,
+      "url": "#",
+      "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/c6/13/27/5e3f4a1e9c8e8a3a3e1c6b3e6e3c6b1e.png.webp",
+      "category_id": "dien-thoai-may-tinh-bang"
+    },
+    {
+      "id": "shopee_tv_5",
+      "name": "Máy chiếu mini Beecube Xtreme II",
+      "platform": "Shopee",
+      "price": 3490000,
+      "url": "#",
+      "image_url": "https://down-vn.img.susercontent.com/file/sg-11134201-22100-qj2v1w1vj2ivf0",
+      "category_id": "tivi-am-thanh"
+    },
+    {
+      "id": "lazada_dl_5",
+      "name": "Máy sấy quần áo Electrolux 8.5kg EDV854J3WB",
+      "platform": "Lazada",
+      "price": 8990000,
+      "url": "#",
+      "image_url": "https://lzd-img-global.slatic.net/g/p/6d3c32918e95781a7194f1c1f8a8b1a8.jpg_720x720q80.jpg_.webp",
+      "category_id": "dien-lanh"
+    },
+    {
+      "id": "tiki_gd_5",
+      "name": "Máy rửa bát Bosch SMS63L08EA",
+      "platform": "Tiki",
+      "price": 14500000,
+      "url": "#",
+      "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/9e/15/8e/3c5b364811a00a22e8031d1d368e5473.jpg.webp",
+      "category_id": "thiet-bi-gia-dung"
+    },
+    {
+      "id": "shopee_yt_4",
+      "name": "Thực phẩm chức năng Blackmores Glucosamine",
+      "platform": "Shopee",
+      "price": 480000,
+      "url": "#",
+      "image_url": "https://down-vn.img.susercontent.com/file/sg-11134201-22120-7fhm2z2u4wkv69",
+      "category_id": "thiet-bi-y-te-suc-khoe"
+    },
+    {
+      "id": "lazada_mp_4",
+      "name": "Nước tẩy trang Bioderma Sensibio H2O",
+      "platform": "Lazada",
+      "price": 355000,
+      "url": "#",
+      "image_url": "https://lzd-img-global.slatic.net/g/p/mdc/d134b281f6d3f2a893c54c0e66860d4b.jpg_720x720q80.jpg_.webp",
+      "category_id": "thoi-trang-my-pham"
+    },
+    {
+      "id": "tiki_tt_4",
+      "name": "Vali du lịch size 20 inch",
+      "platform": "Tiki",
+      "price": 799000,
+      "url": "#",
+      "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/ad/9f/8e/d5e3f5d52a78f6c4f0b2f1e6a3c9b7e1.jpg.webp",
+      "category_id": "thoi-trang-my-pham"
+    },
+    {
+      "id": "shopee_mb_5",
+      "name": "Địu em bé Ergobaby Omni 360",
+      "platform": "Shopee",
+      "price": 3200000,
+      "url": "#",
+      "image_url": "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lk3h4v1x5x218c",
+      "category_id": "me-va-be"
+    },
+    {
+      "id": "lazada_dt_6",
+      "name": "Asus ROG Phone 8",
+      "platform": "Lazada",
+      "price": 24990000,
+      "url": "#",
+      "image_url": "https://lzd-img-global.slatic.net/g/p/a9b8c7d6e5f4d3c2b1a09b8c7d6e5f4d.jpg_720x720q80.jpg_.webp",
+      "category_id": "dien-thoai-may-tinh-bang"
+    },
+    {
+      "id": "tiki_tv_6",
+      "name": "Tivi Coocaa 32 inch 32S3U",
+      "platform": "Tiki",
+      "price": 3190000,
+      "url": "#",
+      "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/3e/1c/0d/9c57d74c0521e105349e29a3a2e37e88.png.webp",
+      "category_id": "tivi-am-thanh"
+    },
+    {
+      "id": "shopee_dl_6",
+      "name": "Máy hút ẩm Electrolux EDH16SDAW",
+      "platform": "Shopee",
+      "price": 5490000,
+      "url": "#",
+      "image_url": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lq411j4coo7je4",
+      "category_id": "dien-lanh"
+    },
+    {
+      "id": "lazada_gd_6",
+      "name": "Cây lau nhà tự vắt thông minh",
+      "platform": "Lazada",
+      "price": 450000,
+      "url": "#",
+      "image_url": "https://lzd-img-global.slatic.net/g/p/mdc/d134b281f6d3f2a893c54c0e66860d4b.jpg_720x720q80.jpg_.webp",
+      "category_id": "thiet-bi-gia-dung"
+    },
+    {
+      "id": "tiki_yt_5",
+      "name": "Vitamin D3 K2 MK7 Sunday Natural",
+      "platform": "Tiki",
+      "price": 280000,
+      "url": "#",
+      "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/d0/25/74/5971520e5a40a85e8d3c5f47aae451e5.jpg.webp",
+      "category_id": "thiet-bi-y-te-suc-khoe"
+    },
+    {
+      "id": "shopee_mp_5",
+      "name": "Sữa rửa mặt Cetaphil Gentle Skin Cleanser",
+      "platform": "Shopee",
+      "price": 250000,
+      "url": "#",
+      "image_url": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lkw15s55kpxrf4",
+      "category_id": "thoi-trang-my-pham"
+    },
+    {
+      "id": "lazada_tt_5",
+      "name": "Kính mát Ray-Ban Aviator Classic",
+      "platform": "Lazada",
+      "price": 3500000,
+      "url": "#",
+      "image_url": "https://lzd-img-global.slatic.net/g/p/f23a5c377f3e1b7a2d4b9f291e779836.jpg_720x720q80.jpg_.webp",
+      "category_id": "thoi-trang-my-pham"
+    },
+    {
+      "id": "tiki_mb_6",
+      "name": "Giường cũi trẻ em 3 trong 1",
+      "platform": "Tiki",
+      "price": 2990000,
+      "url": "#",
+      "image_url": "https://salt.tikicdn.com/cache/750x750/ts/product/b2/8e/f3/e4d1f2b1c8a7d6e5f3b4c3a2d1e0a9b8.jpg.webp",
+      "category_id": "me-va-be"
     }
   ]
 }
