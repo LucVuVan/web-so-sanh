@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const productDetailContainer = document.getElementById('product-detail-container');
-
-    // Lấy ID sản phẩm từ URL
     const params = new URLSearchParams(window.location.search);
     const productId = params.get('id');
 
@@ -10,17 +8,20 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    // Tải dữ liệu và tìm sản phẩm
-    async function fetchProductDetails() {
+    async function fetchProductData() {
         try {
             const response = await fetch('mock-data.json');
             const data = await response.json();
-            
-            // Dùng hàm find để tìm sản phẩm có ID khớp
             const product = data.products.find(p => p.id === productId);
 
             if (product) {
                 displayProductDetails(product);
+
+                const relatedProducts = data.products.filter(p => 
+                    p.category_id === product.category_id && p.id !== product.id
+                ).slice(0, 5);
+
+                displayRelatedProducts(relatedProducts);
             } else {
                 productDetailContainer.innerHTML = '<h1>Sản phẩm không tồn tại.</h1>';
             }
@@ -30,11 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Hiển thị thông tin sản phẩm đã tìm thấy
     function displayProductDetails(product) {
-        // Cập nhật tiêu đề trang
         document.title = product.name;
-
         productDetailContainer.innerHTML = `
             <div class="product-detail-image">
                 <img src="${product.image_url}" alt="${product.name}">
@@ -48,9 +46,35 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h2>Mô tả sản phẩm</h2>
                     <p>Đây là mô tả mẫu cho sản phẩm. Thông tin chi tiết về thông số kỹ thuật, tính năng nổi bật, và chính sách bảo hành sẽ được cập nhật ở đây khi có dữ liệu thật từ backend.</p>
                 </div>
-            </div>
-        `;
+            </div>`;
     }
 
-    fetchProductDetails();
+    function displayRelatedProducts(products) {
+        const relatedListContainer = document.getElementById('related-products-list');
+        const relatedSection = document.querySelector('.related-products-section');
+
+        if (products.length === 0) {
+            relatedSection.style.display = 'none';
+            return;
+        }
+
+        relatedListContainer.innerHTML = '';
+        products.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.className = 'product-card';
+            productCard.innerHTML = `
+                <a href="product.html?id=${product.id}" class="product-card-link">
+                    <img src="${product.image_url}" alt="${product.name}" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">${product.name}</h3>
+                        <p class="product-platform">${product.platform}</p>
+                        <p class="product-price">${product.price.toLocaleString('vi-VN')} ₫</p>
+                        <span class="buy-button">Xem chi tiết</span>
+                    </div>
+                </a>`;
+            relatedListContainer.appendChild(productCard);
+        });
+    }
+
+    fetchProductData();
 });

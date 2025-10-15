@@ -7,6 +7,8 @@ body {
 main {
     display: flex;
     padding: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 /* --- Header & Logo --- */
@@ -15,7 +17,7 @@ header {
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* <-- Dòng quan trọng nhất */
+    justify-content: space-between;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -28,6 +30,7 @@ header {
     text-decoration: none;
     gap: 0.5rem;
 }
+
 /* --- Search Bar --- */
 .search-bar {
     display: flex;
@@ -36,7 +39,6 @@ header {
     background-color: white;
     border-radius: 50px;
     overflow: hidden;
-    flex-grow: 1;
 }
 
 #search-input {
@@ -76,8 +78,14 @@ header {
 
 /* --- Category Navigation --- */
 #category-nav {
-    width: 240px; /* Tăng độ rộng ở đây */
+    width: 240px;
     margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+#category-nav h2 {
+    font-size: 1.2rem;
+    padding-left: 0.8rem;
 }
 
 #category-nav button.category-button {
@@ -91,10 +99,11 @@ header {
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.2s, border-color 0.2s;
+    font-size: 1rem;
 }
 
 #category-nav button.category-button:hover {
-    background-color: #e0e0e0;
+    background-color: #f0f0f0;
 }
 
 #category-nav button.category-button.active {
@@ -108,9 +117,16 @@ header {
 #product-list {
     flex-grow: 1;
     display: grid;
-    /* Quan trọng: Ra lệnh chỉ hiển thị 5 cột */
     grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
+}
+
+.product-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .product-card {
@@ -121,6 +137,12 @@ header {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .product-card img.product-image {
@@ -142,6 +164,7 @@ header {
 .product-name {
     font-size: 1rem;
     margin: 0 0 0.5rem 0;
+    font-weight: 600;
 }
 
 .product-platform {
@@ -166,84 +189,42 @@ header {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 1rem;
+    font-weight: bold;
 }
 
-/* --- Footer --- */
-footer {
-    background-color: #f8f9fa;
-    color: #555;
-    margin-top: 3rem;
-    padding-top: 2.5rem;
-    border-top: 1px solid #e7e7e7;
-    font-size: 0.9rem;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+/* --- Pagination Controls --- */
+#pagination-controls {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
 }
 
-.footer-column {
-    flex: 1;
-    min-width: 220px;
-}
-
-.footer-column h4 {
+.page-button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    background-color: white;
     color: #333;
-    margin-top: 0;
-    margin-bottom: 1.2rem;
-    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
 }
 
-.footer-column.info .logo {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    color: #333;
+.page-button:hover {
+    background-color: #f0f0f0;
+    border-color: #ccc;
 }
 
-.footer-column.info p {
-    margin: 0.5rem 0;
-    line-height: 1.6;
+.page-button.active {
+    background-color: #d32f2f;
+    color: white;
+    border-color: #d32f2f;
+    font-weight: bold;
 }
 
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-column ul li {
-    margin-bottom: 0.7rem;
-}
-
-.footer-column ul a {
-    color: #555;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.footer-column ul a:hover {
-    color: #007bff;
-    text-decoration: underline;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding: 1.5rem 0;
-    margin-top: 2.5rem;
-    border-top: 1px solid #e7e7e7;
-    font-size: 0.85rem;
-    color: #888;
-}
-
-/* DÁN VÀO CUỐI FILE STYLE.CSS */
-
-/* --- Styling cho trang chi tiết sản phẩm --- */
+/* --- Product Detail Page --- */
 #product-detail-container {
     max-width: 1200px;
     margin: 2rem auto;
@@ -324,42 +305,101 @@ footer {
     width: 100%;
 }
 
-/* --- CSS cho các nút chuyển trang --- */
-#pagination-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* --- Related Products Section --- */
+.related-products-section {
     padding: 2rem 0;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e7e7e7;
 }
 
-.page-button {
-    margin: 0 5px;
-    padding: 10px 15px;
-    border: 1px solid #ddd;
-    background-color: white;
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.related-products-section h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 2rem;
     color: #333;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: all 0.2s ease;
 }
 
-.page-button:hover {
-    background-color: #f0f0f0;
-    border-color: #ccc;
+#related-products-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
 }
 
-/* Style cho nút trang hiện tại */
-.page-button.active {
-    background-color: #d32f2f;
-    color: white;
-    border-color: #d32f2f;
-    font-weight: bold;
+/* --- Footer --- */
+footer {
+    background-color: #f8f9fa;
+    color: #555;
+    padding-top: 2.5rem;
+    border-top: 1px solid #e7e7e7;
+    font-size: 0.9rem;
 }
-/* --- CSS cho các nút chuyển trang --- */
-#pagination-controls {
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
     display: flex;
-    justify-content: center; /* Quan trọng: Căn giữa theo chiều ngang */
-    align-items: center;
-    padding: 2rem 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-column h4 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+}
+
+.footer-column.info .logo {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.footer-column.info p {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.7rem;
+}
+
+.footer-column ul a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-column ul a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2.5rem;
+    border-top: 1px solid #e7e7e7;
+    font-size: 0.85rem;
+    color: #888;
 }
