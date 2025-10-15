@@ -31,22 +31,48 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+
+
     function displayProductDetails(product) {
+        // Cập nhật tiêu đề trang
         document.title = product.name;
+
+        // Tạo các đường link tìm kiếm sản phẩm trên từng sàn
+        const searchName = encodeURIComponent(product.name);
+        const tikiSearchUrl = `https://tiki.vn/search?q=${searchName}`;
+        const shopeeSearchUrl = `https://shopee.vn/search?keyword=${searchName}`;
+        const lazadaSearchUrl = `https://www.lazada.vn/catalog/?q=${searchName}`;
+
         productDetailContainer.innerHTML = `
             <div class="product-detail-image">
                 <img src="${product.image_url}" alt="${product.name}">
             </div>
             <div class="product-detail-info">
                 <h1 class="product-title">${product.name}</h1>
-                <p class="product-platform-detail">Bán trên: <strong>${product.platform}</strong></p>
+                
                 <div class="product-price-detail">${product.price.toLocaleString('vi-VN')} ₫</div>
-                <a href="${product.url}" target="_blank" class="buy-now-button">Đến nơi bán</a>
+
+                <div class="seller-platforms">
+                    <h3>Tìm và so sánh giá trên:</h3>
+                    <div class="platform-links">
+                        <a href="${tikiSearchUrl}" target="_blank" class="platform-link">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Tiki.vn_logo.svg/2560px-Tiki.vn_logo.svg.png" alt="Tìm trên Tiki">
+                        </a>
+                        <a href="${shopeeSearchUrl}" target="_blank" class="platform-link">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Shopee.svg/1200px-Shopee.svg.png" alt="Tìm trên Shopee">
+                        </a>
+                        <a href="${lazadaSearchUrl}" target="_blank" class="platform-link">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Lazada.svg/2560px-Lazada.svg.png" alt="Tìm trên Lazada">
+                        </a>
+                    </div>
+                </div>
+
                 <div class="product-description">
                     <h2>Mô tả sản phẩm</h2>
                     <p>Đây là mô tả mẫu cho sản phẩm. Thông tin chi tiết về thông số kỹ thuật, tính năng nổi bật, và chính sách bảo hành sẽ được cập nhật ở đây khi có dữ liệu thật từ backend.</p>
                 </div>
-            </div>`;
+            </div>
+        `;
     }
 
     function displayRelatedProducts(products) {

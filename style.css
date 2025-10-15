@@ -403,3 +403,49 @@ footer {
     font-size: 0.85rem;
     color: #888;
 }
+
+
+/* --- Khối hiển thị các sàn TMĐT trên trang chi tiết --- */
+.seller-platforms {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e7e7e7;
+}
+
+.seller-platforms h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #333;
+}
+
+.platform-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; /* Khoảng cách giữa các logo */
+}
+
+.platform-link {
+    display: block;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.platform-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.platform-link img {
+    height: 40px; /* Chiều cao cố định cho các logo */
+    width: auto;
+    max-width: 100px;
+    object-fit: contain; /* Giữ tỷ lệ logo, không làm méo */
+}
