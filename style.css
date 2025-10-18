@@ -7,17 +7,17 @@ body {
 main {
     display: flex;
     padding: 1rem;
-    max-width: 1400px;
-    margin: 0 auto;
+    max-width: 1400px; /* Limit main content width for larger screens */
+    margin: 0 auto; /* Center main content */
 }
 
 /* --- Header & Logo --- */
 header {
-    background-color: #d32f2f;
+    background-color: #d32f2f; /* Red background */
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Pushes logo left, search right */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -29,16 +29,25 @@ header {
     color: white;
     text-decoration: none;
     gap: 0.5rem;
+    /* margin-right is removed, space-between handles spacing */
 }
 
-/* --- Search Bar --- */
+/* --- Search Bar & Sort Dropdown Container --- */
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 700px; /* Limit width */
+    margin-left: 2rem; /* Add some space from logo */
+}
+
 .search-bar {
     display: flex;
-    width: 50%;
-    max-width: 600px;
+    flex-grow: 1; /* Allow search bar to take up space */
     background-color: white;
     border-radius: 50px;
     overflow: hidden;
+    margin-right: 1rem; /* Space before dropdown */
 }
 
 #search-input {
@@ -76,16 +85,26 @@ header {
     background-size: contain;
 }
 
+#sort-select {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    background-color: white;
+    min-width: 150px;
+}
+
 /* --- Category Navigation --- */
 #category-nav {
-    width: 240px;
+    width: 240px; /* Increased width */
     margin-right: 1rem;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Prevent shrinking on smaller screens */
 }
 
 #category-nav h2 {
     font-size: 1.2rem;
     padding-left: 0.8rem;
+    margin-top: 0; /* Remove default top margin */
 }
 
 #category-nav button.category-button {
@@ -107,7 +126,7 @@ header {
 }
 
 #category-nav button.category-button.active {
-    background-color: #d32f2f !important;
+    background-color: #d32f2f !important; /* Red active state */
     color: white !important;
     border-color: #d32f2f !important;
     font-weight: bold;
@@ -117,8 +136,18 @@ header {
 #product-list {
     flex-grow: 1;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
     gap: 1rem;
+}
+
+/* Style for the 'No products found' message */
+#product-list p {
+    grid-column: 1 / -1; /* Make it span all 5 columns */
+    text-align: center;
+    white-space: nowrap; /* Keep on one line */
+    font-size: 1.2rem;
+    color: #666;
+    padding: 3rem 0;
 }
 
 .product-card-link {
@@ -126,7 +155,7 @@ header {
     color: inherit;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100%; /* Make link fill the card */
 }
 
 .product-card {
@@ -147,50 +176,60 @@ header {
 
 .product-card img.product-image {
     width: 100%;
-    height: 200px;
+    height: 90px;  /* Giảm chiều cao ảnh */
     object-fit: contain;
-    padding: 10px;
+    padding: 5px;   /* Giảm padding quanh ảnh */
     background-color: white;
     border-bottom: 1px solid #eee;
 }
 
 .product-info {
-    padding: 1rem;
+    padding: 0.4rem; /* Restored padding */
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
 .product-name {
-    font-size: 1rem;
-    margin: 0 0 0.5rem 0;
+    font-size: 1.0rem; /* Giảm font */
     font-weight: 600;
+    margin: 0 0 0.3rem 0; /* Giảm margin */
+    line-height: 1.2em;
+    height: 2.4em; /* Vẫn giữ 2 dòng */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
-
 .product-platform {
     color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+    font-size: 0.8rem; /* Giảm font */
+    margin-bottom: 0.3rem; /* Giảm margin */
 }
-
 .product-price {
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Giảm font */
     font-weight: bold;
-    color: #d32f2f;
+    color: #d32f2f !important;
     margin-top: auto;
 }
-
 .buy-button {
     display: block;
     background-color: #1e88e5;
     color: white;
     text-align: center;
-    padding: 0.7rem;
+    padding: 0.5rem; /* Giảm padding */
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 1rem;
+    margin-top: 0.4rem; /* Giảm margin */
     font-weight: bold;
+    font-size: 0.9rem; /* Giảm font */
+    transition: background-color 0.2s;
 }
+.buy-button:hover { /* Thêm lại hover cho nút xanh nếu cần */
+    background-color: #1565c0; /* Màu xanh đậm hơn */
+}
+/* *** RESTORED CARD HEIGHT STYLES END HERE *** */
 
 /* --- Pagination Controls --- */
 #pagination-controls {
@@ -238,7 +277,7 @@ header {
 
 .product-detail-image {
     flex: 1;
-    max-width: 40%;
+    max-width: 40%; /* Limit image width */
 }
 
 .product-detail-image img {
@@ -257,20 +296,14 @@ header {
     margin-bottom: 1rem;
 }
 
-.product-platform-detail {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 1.5rem;
-}
-
-.product-price-detail {
+.product-price-detail { /* Added back for temporary price */
     font-size: 2.5rem;
     font-weight: bold;
     color: #d32f2f;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
-.buy-now-button {
+.buy-now-button { /* Style for the 'Đến nơi bán' button on detail page */
     display: inline-block;
     background-color: #d32f2f;
     color: white;
@@ -281,11 +314,59 @@ header {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.2s;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; /* Space below button */
 }
 
 .buy-now-button:hover {
-    background-color: #b71c1c;
+    background-color: #b71c1c; /* Darker red on hover */
+}
+
+.seller-platforms {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e7e7e7;
+}
+
+.seller-platforms h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #333;
+}
+
+.platform-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.platform-link {
+    display: block;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.platform-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.platform-link img {
+    height: 40px;
+    width: auto;
+    max-width: 100px;
+    object-fit: contain;
+}
+
+.product-description {
+    margin-top: 2rem;
 }
 
 .product-description h2 {
@@ -312,8 +393,8 @@ header {
     border-top: 1px solid #e7e7e7;
 }
 
-.container {
-    max-width: 1400px;
+.container { /* Used for related products section width */
+    max-width: 1400px; /* Match main content width */
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -326,7 +407,7 @@ header {
     color: #333;
 }
 
-#related-products-list {
+#related-products-list { /* Uses #product-list styles by default */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
@@ -363,9 +444,14 @@ footer {
     font-weight: 600;
 }
 
+/* Make footer logo smaller */
+.footer-column.info .logo svg {
+   height: 24px;
+   width: auto;
+}
 .footer-column.info .logo {
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1rem; /* Adjust text size too */
     color: #333;
 }
 
@@ -402,50 +488,4 @@ footer {
     border-top: 1px solid #e7e7e7;
     font-size: 0.85rem;
     color: #888;
-}
-
-
-/* --- Khối hiển thị các sàn TMĐT trên trang chi tiết --- */
-.seller-platforms {
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    border: 1px solid #e7e7e7;
-}
-
-.seller-platforms h3 {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    font-size: 1.2rem;
-    text-align: center;
-    color: #333;
-}
-
-.platform-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem; /* Khoảng cách giữa các logo */
-}
-
-.platform-link {
-    display: block;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: white;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.platform-link:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.platform-link img {
-    height: 40px; /* Chiều cao cố định cho các logo */
-    width: auto;
-    max-width: 100px;
-    object-fit: contain; /* Giữ tỷ lệ logo, không làm méo */
 }
